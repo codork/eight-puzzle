@@ -30,50 +30,7 @@ class Node extends State {
     	this.children = new LinkedList<>();
     }
     
-   /* LinkedList<Node> getChildren(Node parent, State goalState) {
-    	
-    	State testState = null;
-    	Node child;
-    	LinkedList<Node> childrenPtr = new LinkedList<>();
-    	
-    	//attempt to create states for each move, and add to the list of children if true
-    	
-        if(parent.state.action != Move.LEFT && parent.state.action!=Move.UP && parent.state.action != Move.RIGHT) {
-        	testState = createState(parent.state, Move.DOWN);
-        	if(!statesMatch(testState, parent.state)) {
-            child = new Node(parent.depth + 1, manhattanDist(testState, goalState), testState, parent);
-            parent.children.push(child);
-            childrenPtr.push(child);
-        	}
-        }
-        if(parent.state.action != Move.LEFT && parent.state.action!=Move.DOWN && parent.state.action != Move.RIGHT) {
-        	testState = createState(parent.state, Move.UP);
-        	if(!statesMatch(testState, parent.state)) {
-                child = new Node(parent.depth + 1, manhattanDist(testState, goalState), testState, parent);
-                parent.children.push(child);
-                childrenPtr.push(child);
-        	}
-        }
-        if(parent.state.action != Move.LEFT && parent.state.action!=Move.DOWN && parent.state.action != Move.UP) {
-        	testState = createState(parent.state, Move.RIGHT);
-        	if(!statesMatch(testState, parent.state)) {
-                child = new Node(parent.depth + 1, manhattanDist(testState, goalState), testState, parent);
-                parent.children.push(child);
-                childrenPtr.push(child);
-        	}
-        }
-        if(parent.state.action != Move.UP && parent.state.action!=Move.DOWN && parent.state.action != Move.RIGHT) {
-        	testState = createState(parent.state, Move.LEFT);
-        	if(!statesMatch(testState, parent.state)) {
-                child = new Node(parent.depth + 1, manhattanDist(testState, goalState), testState, parent);
-                parent.children.push(child);
-                childrenPtr.push(child);
-        	}
-        }
-
-        return childrenPtr;
-        
-    }*/
+   
     
     LinkedList<Node> getChildren(Node parent, State goalState) 
     {
